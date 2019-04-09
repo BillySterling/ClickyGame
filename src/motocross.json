@@ -1,61 +1,73 @@
 [
   {
     "id": 1,
+	"name": "moto_1",
     "image": "https://media.giphy.com/media/l41m2YQvsL5eMd3KU/giphy.gif",
     "clicked": false
   },
   {
     "id": 2,
+	"name": "moto_2",
     "image": "https://media.giphy.com/media/xTiTnz33weTH3K8Uvu/giphy.gif",
     "clicked": false
   },
   {
     "id": 3,
+	"name": "moto_3",
     "image": "https://media.giphy.com/media/3o85xs8qEtiqFPjrUc/giphy.gif",
     "clicked": false
   },
   {
     "id": 4,
+	"name": "moto_4",
     "image": "https://media.giphy.com/media/l41m5FCBtcRpH4Djq/giphy.gif",
     "clicked": false
   },
   {
     "id": 5,
+	"name": "moto_5",
     "image": "https://media.giphy.com/media/3ohhwvcRk2NDL7fKsE/giphy.gif",
     "clicked": false
   },
   {
     "id": 6,
+	"name": "moto_6",
     "image": "https://media.giphy.com/media/3o85xI1DBa3XAsOUxO/giphy.gif",
     "clicked": false
   },
   {
     "id": 7,
+	"name": "moto_7",
     "image": "https://media.giphy.com/media/1wmM8838LfW9sYZ1Bq/giphy.gif",
     "clicked": false
   },
   {
     "id": 8,
+	"name": "moto_8",
     "image": "https://media.giphy.com/media/5xtDarqVKdzeSzUtpwA/giphy.gif",
     "clicked": false
   },
   {
     "id": 9,
+	"name": "moto_9",
     "image": "https://media.giphy.com/media/10GGzGfwLBRFp6/giphy.gif",
     "clicked": false
   },
   {
     "id": 10,
+	"name": "moto_10",
     "image": "https://media.giphy.com/media/3o85xzOGdFs4ZohdHa/giphy.gif",
     "clicked": false
   },
   {
     "id": 11,
+	"name": "moto_11",
     "image": "https://media.giphy.com/media/3o85xG8ArR8JA8GDuM/giphy.gif",
     "clicked": false
   },
   {
     "id": 12,
+	"name": "moto_12",
     "image": "https://media.giphy.com/media/xTiTngZmDhY3PvWRb2/giphy.gif",
     "clicked": false
   }
