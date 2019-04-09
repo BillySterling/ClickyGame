@@ -1,36 +1,34 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import MotoCard from "./components/MotoCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import friends from "./friends.json";
+import motocross from "./motocross.json";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Setting this.state.motocross to the motocross json array
   state = {
-    friends
+    motocross
   };
 
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
+  removeMoto = id => {
+    // Filter this.state.motocross for motocross with an id not equal to the id being removed
+    const motocross = this.state.motocross.filter(moto => moto.id !== id);
+    // Set this.state.motocross equal to the new motocross array
+    this.setState({ motocross });
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over this.state.motocross and render a motoCard component for each moto object
   render() {
     return (
       <Wrapper>
-        <Title>Friends List</Title>
-        {this.state.friends.map(friend => (
-          <FriendCard
-            removeFriend={this.removeFriend}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
+        <Title>Motocross Funnies</Title>
+        {this.state.motocross.map(moto => (
+          <MotoCard
+            handleClick={this.handleClick}
+            id={moto.id}
+            key={moto.id}
+            name={moto.name}
+            image={moto.image}
           />
         ))}
       </Wrapper>
