@@ -10,7 +10,8 @@ class App extends Component {
     motocross,
     idsClicked: [],
     score: 0,
-    topScore: 0
+    topScore: 0,
+    message: "Don't Click the Same Image Twice!"
   };
 
   handleClick = id => {
@@ -18,7 +19,8 @@ class App extends Component {
     this.setState( {score: this.state.score +1} )
     this.shuffleCards(this.state.motocross)
     if (this.state.idsClicked.includes(id)) {
-      alert("Already Clicked!")
+      // alert("Already Clicked!")
+      this.setState( {message: "YOU LOST!"} )
       this.setState( {score: 0} )
     }
     this.setState({ idsClicked: this.state.idsClicked.concat(id) });
@@ -37,7 +39,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title score={this.state.score}/>
+        <Title score={this.state.score} message={this.state.message}/>
         {this.state.motocross.map(moto => (
           <MotoCard
             handleClick={this.handleClick}
