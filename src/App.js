@@ -16,17 +16,20 @@ class App extends Component {
 
   handleClick = id => {
     console.log(id)
-    this.setState( {score: this.state.score +1} )
     this.shuffleCards(this.state.motocross)
     if (this.state.idsClicked.includes(id)) {
-      // alert("Already Clicked!")
-      this.setState( {message: "YOU LOST!"} )
+      this.setState( {message: "YOU LOST!    Click here to replay"} )
       this.setState( {score: 0} )
-    }
+      }  else if (
+        this.state.score >= 14  ) {
+          this.setState( {message: "YOU WON!    Click here to replay"} )}
+          else {
+            this.setState( {score: this.state.score +1} )
+          };
     this.setState({ idsClicked: this.state.idsClicked.concat(id) });
   };
 
-  //  The Fisher–Yates shuffle. Eee:  https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array and refer to ES6 version on page. 
+  //  The Fisher–Yates shuffle. See:  https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array and refer to ES6 version on page. 
   shuffleCards = a => {
       for (let i = a.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
