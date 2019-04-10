@@ -70,6 +70,24 @@
 	"name": "moto_12",
     "image": "https://media.giphy.com/media/xTiTngZmDhY3PvWRb2/giphy.gif",
     "clicked": false
+  },
+  {
+    "id": 13,
+	"name": "moto_13",
+    "image": "https://media.giphy.com/media/4K9hkn5F2ty2A/giphy.gif",
+    "clicked": false
+  },
+  {
+    "id": 14,
+	"name": "moto_14",
+    "image": "https://media.giphy.com/media/mwT4hNnS5pr2g/giphy.gif",
+    "clicked": false
+  },
+  {
+    "id": 15,
+	"name": "moto_15",
+    "image": "https://media.giphy.com/media/QzOHSqe9m9RYI/giphy.gif",
+    "clicked": false
   }
 ]
 

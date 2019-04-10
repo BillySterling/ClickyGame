@@ -9,13 +9,13 @@ class App extends Component {
   state = {
     motocross,
     idsClicked: [],
-    score: 0
+    score: 0,
+    topScore: 0
   };
 
   handleClick = id => {
     console.log(id)
     this.setState( {score: this.state.score +1} )
-    // Filter this.state.motocross for motocross with an id not equal to the id being removed
     this.shuffleCards(this.state.motocross)
     if (this.state.idsClicked.includes(id)) {
       alert("Already Clicked!")
@@ -37,8 +37,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <h1>{this.state.score}</h1>
-        <Title>Motocross Funnies</Title>
+        <Title score={this.state.score}/>
         {this.state.motocross.map(moto => (
           <MotoCard
             handleClick={this.handleClick}
