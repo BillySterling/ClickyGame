@@ -7,20 +7,37 @@ import motocross from "./motocross.json";
 class App extends Component {
   // Setting this.state.motocross to the motocross json array
   state = {
-    motocross
+    motocross,
+    idsClicked: [],
+    score: 0
   };
 
-  removeMoto = id => {
+  handleClick = id => {
+    console.log(id)
+    this.setState( {score: this.state.score +1} )
     // Filter this.state.motocross for motocross with an id not equal to the id being removed
-    const motocross = this.state.motocross.filter(moto => moto.id !== id);
-    // Set this.state.motocross equal to the new motocross array
-    this.setState({ motocross });
+    this.shuffleCards(this.state.motocross)
+    if (this.state.idsClicked.includes(id)) {
+      alert("Already Clicked!")
+      this.setState( {score: 0} )
+    }
+    this.setState({ idsClicked: this.state.idsClicked.concat(id) });
   };
+
+  //  The Fisher–Yates shuffle. Eee:  https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array and refer to ES6 version on page. 
+  shuffleCards = a => {
+      for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+  }
 
   // Map over this.state.motocross and render a motoCard component for each moto object
   render() {
     return (
       <Wrapper>
+        <h1>{this.state.score}</h1>
         <Title>Motocross Funnies</Title>
         {this.state.motocross.map(moto => (
           <MotoCard
