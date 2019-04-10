@@ -1,34 +1,27 @@
 .card {
   background: #fff;
   border-radius: 2px;
-  height: 325px;
+  height: 300px;
   margin: 1rem;
+  margin-top: 4rem;
   position: relative;
-  width: 325px;
+  width: 300px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  text-align: left;
 }
 
-.card > .img-container {
-  height: 60%;
+.card > .cardImage {
+  height: 100%;
   overflow: hidden;
   text-align: center;
   background:#6CADDC;
 }
-.card > .img-container > img {
-  width: 60%
+.card > .cardImage > img {
+  height: 80%;
+  width: 80%
+}
+.card:hover {
+  box-shadow: 8px 8px 20px rgb(151, 6, 6);
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
-.card > .content {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 15px;
-}
-
-.card > .content > ul {
-  list-style-type: none;
-}
-
-.card > .content > ul > li {
-  margin-top: 18px;
-}
